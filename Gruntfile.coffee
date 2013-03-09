@@ -55,5 +55,5 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks('grunt-contrib-livereload')
 
   # Default task(s).
-  grunt.registerTask('default', ['coffee','stylus','jade'])
-  grunt.registerTask('run', ['default', 'livereload-start', 'connect', 'regarde'])
+  grunt.registerTask('compile', ['coffee','stylus','jade'])
+  grunt.registerTask('default', ['compile', 'livereload-start', 'connect', 'regarde'])
