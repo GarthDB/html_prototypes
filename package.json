@@ -8,6 +8,7 @@
     "grunt-contrib-coffee": "*",
     "grunt-regarde": "*",
     "grunt-contrib-connect": "*",
-    "grunt-contrib-livereload": "*"
+    "grunt-contrib-livereload": "*",
+    "coffee-script": "*"
   }
 }
