@@ -1,2 +1,1 @@
 $ ->
-	# Stuff here

@@ -6,7 +6,8 @@
     "grunt-contrib-jade": "*",
     "grunt-contrib-stylus": "*",
     "grunt-contrib-coffee": "*",
-    "grunt-contrib-watch": "*",
-    "grunt-contrib-connect": "*"
+    "grunt-regarde": "*",
+    "grunt-contrib-connect": "*",
+    "grunt-contrib-livereload": "*"
   }
 }

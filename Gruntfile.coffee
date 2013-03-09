@@ -1,6 +1,13 @@
+'use strict'
+path = require('path')
+lrSnippet = require('grunt-contrib-livereload/lib/utils').livereloadSnippet
+
+folderMount = (connect, point) ->
+  return connect.static(path.resolve(point))
+
+
 module.exports = (grunt) ->
 
-  # Project configuration.
   grunt.initConfig
     pkg: grunt.file.readJSON('package.json')
     stylus:
@@ -20,27 +27,33 @@ module.exports = (grunt) ->
       compile:
         files:
           'js/main.js': 'js/main.coffee'
-    watch:
-      coffeeScripts:
-        files: ['**/*.coffee']
-        tasks: 'coffee'
-      jadeScripts:
-        files: ['**/*.jade']
-        tasks: 'jade'
-      stylusScripts:
-        files: ['**/*.stylus']
-        tasks: 'stylus'
     connect:
-      server:
-        port: 8080
-        base: './'
+      livereload:
+        options:
+          port: 9001
+          middleware: (connect, options) ->
+            return [lrSnippet, folderMount(connect, '.')]
+    regarde:
+      stylus:
+        files: ['css/*.stylus']
+        tasks: ['stylus', 'livereload']
+      jade:
+        files: ['*.jade']
+        tasks: ['jade', 'livereload']
+      coffee:
+        files: ['js/*.coffee']
+        tasks: ['coffee', 'livereload']
+      image:
+        files: ['img/*']
+        tasks: ['livereload']
 
   grunt.loadNpmTasks('grunt-contrib-coffee')
   grunt.loadNpmTasks('grunt-contrib-stylus')
   grunt.loadNpmTasks('grunt-contrib-jade')
-  grunt.loadNpmTasks('grunt-contrib-watch')
+  grunt.loadNpmTasks('grunt-regarde')
   grunt.loadNpmTasks('grunt-contrib-connect')
+  grunt.loadNpmTasks('grunt-contrib-livereload')
 
   # Default task(s).
   grunt.registerTask('default', ['coffee','stylus','jade'])
-  grunt.registerTask('run', ['watch','connect'])
+  grunt.registerTask('run', ['default', 'livereload-start', 'connect', 'regarde'])
