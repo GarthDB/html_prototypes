@@ -35,7 +35,7 @@ module.exports = (grunt) ->
             return [lrSnippet, folderMount(connect, '.')]
     regarde:
       stylus:
-        files: ['css/*.stylus']
+        files: ['css/*.styl']
         tasks: ['stylus', 'livereload']
       jade:
         files: ['*.jade']
