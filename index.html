@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <script src="js/zepto.min.js"></script>
-    <script src="js/app.js"></script><!--[if lt IE 9]>
+    <script src="js/main.js"></script><!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   </head>
   <body>
@@ -31,7 +31,7 @@
                 <h2>Good things are happening.</h2>
                 <p>Stay in the loop.</p>
               </header>
-              <form>
+              <form id="request-invite-form">
                 <div class="email-input">
                   <input type="email" placeholder="email">
                 </div>
@@ -43,7 +43,7 @@
             <hr>
             <div class="signin">
               <p>Have an invitation?</p>
-              <form>
+              <form id="signin-form">
                 <div class="text-input">
                   <input type="text" placeholder="username or email">
                 </div>
