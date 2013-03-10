@@ -3,7 +3,6 @@ body {
   background: #333;
 }
 #content {
-  color: #333;
   font-size: 14px;
 }
 #content h2 {
@@ -134,7 +133,6 @@ body > footer .location {
 @media only screen and (min-width: 420px) and (max-width: 740px) {
   #signin {
     padding: 0;
-    clear: both;
   }
   #signin h2 {
     font-size: 18px;
