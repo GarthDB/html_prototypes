@@ -1,0 +1,11 @@
+body > header {
+  height: 60px;
+  width: 100%;
+}
+body > header nav {
+  position: absolute;
+}
+body > header nav li {
+  display: inline-block;
+  padding: 4px 18px;
+}

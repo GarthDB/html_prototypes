@@ -12,5 +12,21 @@ html
 			script(src = '//html5shiv.googlecode.com/svn/trunk/html5.js')
 	body
 		header
+			img#logo(src="#", width="55", height="40")
+			nav: ul
+				li: a(href="#") Posts
+				li: a(href="#") Activities
+				li: a(href="#") Designers
+				li: a(href="#") Submissions
+			#profile_settings
+				img(src="img/profile_image.jpg", width="25", height="25")
 		#content
+			h2 Homepage
+			section.author
+				img(src="img/author_image.jpg", width="20", height="20")
+				.name Sam Drole
+			.description
+				p Brainstorm for different postion and style of posts on the home page
+			.artwork
+				img(src="img/sample_wireframe.jpg")
 		footer

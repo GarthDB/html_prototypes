@@ -30,6 +30,7 @@ module.exports = (grunt) ->
     connect:
       livereload:
         options:
+          hostname: '0.0.0.0'
           port: 9001
           middleware: (connect, options) ->
             return [lrSnippet, folderMount(connect, '.')]
