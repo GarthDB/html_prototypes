@@ -1,11 +1,143 @@
+h2 {
+  font-size: 21px;
+  margin: 10px 0 8px;
+}
+a {
+  color: #4d7397;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+body {
+  font-family: "lato", sans-serif;
+  color: #333;
+}
+body:before {
+  width: 100%;
+  height: 60px;
+  background-image: -webkit-linear-gradient(top, #364f71, #263553);
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 body > header {
   height: 60px;
   width: 100%;
+  position: relative;
+  margin: 0 auto;
+  width: 700px;
 }
-body > header nav {
+#main-nav {
+  position: absolute;
+  left: 84px;
+  top: 17px;
+}
+#main-nav li {
+  display: inline-block;
+}
+#main-nav li a {
+  font-size: 12px;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  padding: 7px 18px 0;
+  height: 26px;
+  box-sizing: border-box;
+}
+#main-nav li a:hover {
+  color: #e6ba7c;
+}
+#main-nav li.selected a {
+  background: #000;
+  border-radius: 13px;
+  color: #e6ba7c;
+}
+#profile_settings {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 18px;
+  right: 20px;
+}
+#logo {
+  position: absolute;
+  top: 10px;
+  left: 0;
+}
+#content {
+  width: 700px;
+  position: relative;
+  margin: 0 auto;
+}
+#content header {
+  font-size: 12px;
+}
+#content header .author {
+  margin-bottom: 16px;
+}
+#content header .author img {
+  vertical-align: middle;
+}
+#content header .author .name {
+  display: inline-block;
+  vertical-align: middle;
+}
+#content header .description {
+  margin-bottom: 16px;
+}
+#content .art-comments .number {
+  width: 20px;
+  height: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background: rgba(39,54,82,0.8);
+  color: #e6bc80;
+  font-weight: bold;
+  padding: 4px 1px 0 0;
+  text-align: center;
+  margin: -10px 0 0 -10px;
+  font-size: 12px;
+}
+#content .art-comments .artwork {
+  display: inline-block;
+  position: relative;
+}
+#content .art-comments .artwork img {
+  border: 1px solid #b3b3b3;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.25);
+}
+#content .art-comments .artwork .number {
   position: absolute;
 }
-body > header nav li {
-  display: inline-block;
-  padding: 4px 18px;
+#content .art-comments aside {
+  width: 160px;
+  float: right;
+}
+#content .art-comments aside .comment {
+  background: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 8px;
+  border-box: box-sizing;
+  font-size: 12px;
+  position: relative;
+  margin-bottom: 20px;
+}
+#content .art-comments aside .comment header img {
+  float: left;
+  margin-right: 5px;
+}
+#content .art-comments aside .comment header .author {
+  font-size: 10px;
+  margin-bottom: 8px;
+}
+#content .art-comments aside .comment header .number {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#content .art-comments aside .comment p {
+  clear: both;
 }

@@ -11,10 +11,11 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   </head>
   <body>
-    <header><img id="logo" src="#" width="55" height="40">
-      <nav>
+    <header>
+      <h1 id="logo"><a href="#"><img src="img/logo.svg" width="55" height="40"></a></h1>
+      <nav id="main-nav">
         <ul>
-          <li><a href="#">Posts</a></li>
+          <li class="selected"><a href="#">Posts</a></li>
           <li><a href="#">Activities</a></li>
           <li><a href="#">Designers</a></li>
           <li><a href="#">Submissions</a></li>
@@ -23,14 +24,37 @@
       <div id="profile_settings"><img src="img/profile_image.jpg" width="25" height="25"></div>
     </header>
     <div id="content">
-      <h2>Homepage</h2>
-      <section class="author"><img src="img/author_image.jpg" width="20" height="20">
-        <div class="name">Sam Drole</div>
-      </section>
-      <div class="description">
-        <p>Brainstorm for different postion and style of posts on the home page</p>
+      <header>
+        <h2>Homepage</h2>
+        <section class="author"><img src="img/author_image.jpg" width="20" height="20">
+          <div class="name"><a href="#">Sam Drole</a></div>
+        </section>
+        <div class="description">
+          <p>Brainstorm for different postion and style of posts on the home page</p>
+        </div>
+      </header>
+      <div class="art-comments">
+        <div class="artwork"><img src="img/sample_wireframe.jpg">
+          <div style="left: 32px; top: 634px;" class="number">1</div>
+        </div>
+        <aside>
+          <article class="comment">
+            <header><img src="img/author_image.jpg" width="20" height="20">
+              <div class="name"><a href="#">Sam Drole</a></div>
+              <div class="author">Author</div>
+              <div class="number">1</div>
+            </header>
+            <p>This option would have all 4 side by side.</p>
+          </article>
+          <article class="comment">
+            <header><img src="img/author_image.jpg" width="20" height="20">
+              <div class="name"><a href="#">Cami</a></div>
+              <div class="number">2</div>
+            </header>
+            <p>This option would have all 4 side by side.</p>
+          </article>
+        </aside>
       </div>
-      <div class="artwork"><img src="img/sample_wireframe.jpg"></div>
     </div>
     <footer></footer>
   </body>

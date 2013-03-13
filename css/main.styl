@@ -1,9 +1,116 @@
-body > header
-	height 60px
-	width 100%
-	nav
+h2
+	font-size 21px
+	margin 10px 0 8px
+a
+	color #4d7397
+	text-decoration none
+	&:hover
+		text-decoration underline
+body
+	font-family "lato", sans-serif
+	color #333
+	&:before
+		width 100%
+		height 60px
+		background-image -webkit-linear-gradient(top, #364F71, #263553)
+		content ''
 		position absolute
-		
-		li
+		top 0
+		left 0
+	& > header
+		height 60px
+		width 100%
+		position relative
+		margin 0 auto
+		width 700px
+#main-nav
+	position absolute
+	left 84px
+	top 17px
+	li
+		display inline-block
+		a
+			font-size 12px
+			color #FFF
+			text-decoration none
 			display inline-block
-			padding 4px 18px
+			padding 7px 18px 0
+			height 26px
+			box-sizing border-box
+			&:hover
+				color #E6BA7C
+		&.selected a
+			background #000
+			border-radius 13px
+			color #E6BA7C
+#profile_settings
+	position absolute
+	width 25px
+	height 25px
+	top 18px
+	right 20px
+#logo
+	position absolute
+	top 10px
+	left 0
+#content
+	width 700px
+	position relative
+	margin 0 auto
+	header
+		font-size 12px
+		.author
+			margin-bottom 16px
+			img
+				vertical-align middle
+			.name
+				display inline-block
+				vertical-align middle
+		.description
+			margin-bottom 16px
+	.art-comments
+		.number
+			width 20px
+			height 20px
+			box-sizing border-box
+			border-radius 10px
+			background rgba(39,54,82,0.8)
+			color #e6bc80
+			font-weight bold
+			padding 4px 1px 0 0
+			text-align center
+			margin -10px 0 0 -10px
+			font-size 12px
+		.artwork
+			display inline-block
+			position relative
+			img
+				border 1px solid #b3b3b3
+				box-shadow 0 1px 8px rgba(0,0,0,0.25)
+			.number
+				position absolute
+		aside
+			width 160px
+			float right
+			.comment
+				background #F2F2F2
+				border 1px solid #CCC
+				border-radius 3px
+				padding 8px
+				border-box box-sizing
+				font-size 12px
+				position relative
+				margin-bottom 20px
+				header
+					img
+						float left
+						margin-right 5px
+					.author
+						font-size 10px
+						margin-bottom 8px
+					.number
+						position absolute
+						top 0
+						left 0
+				p
+					clear both
