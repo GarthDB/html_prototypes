@@ -30,12 +30,13 @@ module.exports = (grunt) ->
     connect:
       livereload:
         options:
+          hostname: '0.0.0.0'
           port: 9001
           middleware: (connect, options) ->
             return [lrSnippet, folderMount(connect, '.')]
     regarde:
       stylus:
-        files: ['css/*.stylus']
+        files: ['css/*.styl']
         tasks: ['stylus', 'livereload']
       jade:
         files: ['*.jade']
@@ -55,5 +56,5 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks('grunt-contrib-livereload')
 
   # Default task(s).
-  grunt.registerTask('default', ['coffee','stylus','jade'])
-  grunt.registerTask('run', ['default', 'livereload-start', 'connect', 'regarde'])
+  grunt.registerTask('compile', ['coffee','stylus','jade'])
+  grunt.registerTask('default', ['compile', 'livereload-start', 'connect', 'regarde'])

@@ -3,14 +3,51 @@ html
 	head
 		meta(charset = 'utf-8')
 		meta('http-equiv' = 'X-UA-Compatible', content = 'IE=edge,chrome=1')
-		title HTML Prototype
+		meta(name="viewport", content="initial-scale=1.0, user-scalable=no")
+		title UX Cadet
+		script(src="http://use.edgefonts.net/lato:n4,n7.js")
 		link(rel = 'stylesheet', type = 'text/css', href = 'css/reset.css')
 		link(rel = 'stylesheet', type = 'text/css', href = 'css/main.css')
-		script(src = 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js')
-		script(src = 'js/app.js')
+		script(src = 'js/zepto.min.js')
+		script(src = 'js/main.js')
 		//if lt IE 9
 			script(src = '//html5shiv.googlecode.com/svn/trunk/html5.js')
 	body
-		header
-		#content
+		.site_bg
+			.site
+				header.main
+					h1: img#logo(src="img/ux_cadet_logo.svg", alt="UX Cadet")
+				#content
+					section#main
+						#video
+							img(src="img/vimeo_placeholder.svg", alt="video placeholder")
+						footer
+							h2 Champion the users
+							p Sharpen your user experience skills, stretch your experience, and collaborate with other industry professionals
+					aside#signin
+						.request-invite
+							header
+								h2 Good things are happening.
+								p Stay in the loop.
+							form#request-invite-form
+								.email-input: input(type="email", placeholder="email")
+								.submit: input(type="submit", value="Request an invite")
+						hr
+						.signin
+							p Have an invitation?
+							form#signin-form
+								.text-input: input(type="text", placeholder="username or email")
+								.password-input: input(type="password", placeholder="password")
+								.submit: input(type="submit", value="Sign In")
+						div(style="clear:both;")
+				div(style="clear:both;")
 		footer
+			nav.social: ul
+				li: a(href="#") Twitter
+				li: a(href="#") Github
+				li: a(href="#") Behance
+			nav.site-links: ul
+				li: a.contact(href="#") Contact
+				li: a.contact(href="#") Terms
+			.copyright &copy; 2013 UX Cadet.
+			.location Made with &hearts; in Austin at SXSW
