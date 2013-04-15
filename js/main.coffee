@@ -1,4 +1,5 @@
 $ ->
 	$('.artwork img').click (event) ->
-		console.log $(event.target).x
-		console.log event
+		elementTop = $(event.target).offset().top
+		console.log elementTop
+		console.log event.y
